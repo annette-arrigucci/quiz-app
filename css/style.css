@@ -8,10 +8,11 @@ html {
 
 body {
 	background-color: maroon;
+	font-family: 'Merriweather Sans', sans-serif;
 }
 
-header {
-	
+h1 {
+	font-family: 'Yeseva One', serif;
 }
 
 .header-content {
@@ -28,7 +29,7 @@ header {
 
 .header-content img {
 	float: left;
-	margin: 20px 30px;
+	margin: 20px 20px;
 }
 
 .header-content h1 {
@@ -37,4 +38,122 @@ header {
 	text-align: center;
 	margin-left: 10px;
 	margin-right: 10px;
+}
+
+.question {
+	width: 60%;
+	margin: 3em auto;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	border-radius: 10px;
+	background-color: tan;
+	text-align: center;
+	border: 50px solid white;
+}
+
+.question1 {
+	
+}
+
+.question1 .radio-buttons {
+	width: 10%;
+}
+
+.question2 {
+	
+}
+
+.question3 {
+	
+}
+
+.question3 .radio-buttons {
+	width: 10%;
+}
+
+.question4 {
+	
+}
+
+.question5 {
+	
+}
+
+p {
+	padding-top: 0.5em;
+	padding-left: 2em;
+	padding-right: 2em;
+	margin: 1em auto;
+}
+
+.radio-buttons {
+	width: 20%;
+	text-align: left;
+	margin: 0 auto;
+	padding-bottom: 1em;
+}
+
+input[type="submit"] {
+	display: block;
+	width: 10em;
+	height: 2em;
+	background: #FFF;
+	border: 1px solid maroon;
+	border-radius: 4px;
+	margin: 10px auto;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.5);	
+}
+
+.correct-answer {
+	width: 60%;
+	margin: 3em auto;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	border-radius: 10px;
+	background-color: tan;
+	text-align: center;
+	border: 50px solid white;
+}
+
+.correct1 {
+	
+}
+
+.correct2 {
+	
+}
+
+.correct3 {
+	
+}
+
+.correct4 {
+	
+}
+
+.correct5 {
+	
+}
+
+
+.introduction {
+	width: 60%;
+	margin: 3em auto;
+	padding: 3em;
+	border-radius: 10px;
+	background-color: tan;
+	text-align: center;
+	border: 50px solid white;
+}
+
+.score {
+	width: 60%;
+	margin: 3em auto;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	border-radius: 10px;
+	background-color: tan;
+	text-align: center;
+	padding: 5em;
+	border: 50px solid white;
 }
