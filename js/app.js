@@ -40,7 +40,7 @@ $(document).ready(function(){
     		$(".answerButton").on('click', function() 
     		{
 				guess = $('input[name="answer"]:checked').val();
-				if (guess == myQuestions[questCount].correct) {
+				if (guess == myQuestions[questCount-1].correct) {
 					isGuessCorrect = "Correct";
 					numCorrect++;
 				}
@@ -51,14 +51,15 @@ $(document).ready(function(){
 				$(".correct" + questCount).show();
 				$(".correct" + questCount + " .isCorrect").text(isGuessCorrect);
 				$(".correct" + questCount + " .yourAnswer").text(guess);
-				$(".nextQuestion").on('click', function(){
-					$(".correct" + questCount).hide();
-					questionHandler();
-				});
 			});
 		}	
 		else {
 			alert("Five questions");
 		} 
   	}
+
+  	$(".nextQuestion").on('click', function(){
+		$(".correct" + questCount).hide();
+		questionHandler();
+	});
 });
