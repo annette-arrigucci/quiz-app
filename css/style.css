@@ -51,6 +51,7 @@ h1 {
 	background-color: tan;
 	text-align: center;
 	border: 50px solid white;
+	display: none;
 }
 
 .question1 {
@@ -95,7 +96,7 @@ p {
 	padding-bottom: 1em;
 }
 
-input[type="submit"] {
+.takeQuiz, .answerButton {
 	display: block;
 	width: 10em;
 	height: 2em;
@@ -115,6 +116,7 @@ input[type="submit"] {
 	background-color: tan;
 	text-align: center;
 	border: 50px solid white;
+	display: none;
 }
 
 .correct1 {
@@ -158,4 +160,5 @@ input[type="submit"] {
 	text-align: center;
 	padding: 5em;
 	border: 50px solid white;
+	display: none;
 }
