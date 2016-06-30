@@ -96,7 +96,7 @@ p {
 	padding-bottom: 1em;
 }
 
-.takeQuiz, .answerButton {
+.takeQuiz, .answer-button, .nextQuestion, .tryAgain {
 	display: block;
 	width: 10em;
 	height: 2em;

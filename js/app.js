@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	var guess = null;
 	var isGuessCorrect = null;
 	var numCorrect = 0;
 	var questCount = 0;
@@ -30,17 +29,29 @@ $(document).ready(function(){
 		$(".introduction").hide();
 		questionHandler();
 	});
+
+	function startNewGame() {
+		isGuessCorrect = null;
+		numCorrect = 0;
+		questCount = 0;
+		$(".introduction").show();
+		$(".answerButton1").off();
+		$(".answerButton2").off();
+		$(".answerButton3").off();
+		$(".answerButton4").off();
+		$(".answerButton5").off();
+	}
     
     function questionHandler() {
-    	if(questCount <= 5)
+    	if(questCount < 5)
     	{
     		questCount++;
     		
     		$(".question" + questCount).show();
-    		$(".answerButton").on('click', function() 
+    		$(".answerButton" + questCount).on('click', function() 
     		{
-				guess = $('input[name="answer"]:checked').val();
-				if (guess == myQuestions[questCount-1].correct) {
+				var myGuess = $('input[name="answer' + questCount + '"]:checked').val();
+				if (myGuess == myQuestions[questCount-1].correct) {
 					isGuessCorrect = "Correct";
 					numCorrect++;
 				}
@@ -50,16 +61,23 @@ $(document).ready(function(){
 				$(".question" + questCount).hide();
 				$(".correct" + questCount).show();
 				$(".correct" + questCount + " .isCorrect").text(isGuessCorrect);
-				$(".correct" + questCount + " .yourAnswer").text(guess);
+				$(".correct" + questCount + " .yourAnswer").text(myGuess);
 			});
 		}	
 		else {
-			alert("Five questions");
+			$(".score").show();
+			$(".finalScore").text(numCorrect);
 		} 
   	}
 
   	$(".nextQuestion").on('click', function(){
 		$(".correct" + questCount).hide();
 		questionHandler();
+	});
+
+
+	$(".tryAgain").on('click', function(){
+		$(".score").hide();
+		startNewGame();
 	});
 });
